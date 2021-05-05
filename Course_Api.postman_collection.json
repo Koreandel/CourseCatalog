@@ -1,0 +1,159 @@
+{
+	"info": {
+		"_postman_id": "4d93bcfc-3a7c-4c9f-9582-1d7f6203b89b",
+		"name": "Course_Api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Request to get all objects",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/course/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"course",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Request to get object with id 1",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": null
+			},
+			"response": []
+		},
+		{
+			"name": "Request to create new object",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"test\",\n    \"start_date\": \"2021-07-12T00:00:00Z\",\n    \"expiration_date\": \"2021-06-12T00:00:00Z\",\n    \"lecture_quantity\": 2\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/course/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"course",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Request to get object by name and filter it by start_date",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/course/?name=test",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"course",
+						""
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "test"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Request for change object atributes by id",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"test 3\",\n    \"start_date\": \"2021-02-12T00:00:00Z\",\n    \"expiration_date\": \"2021-06-12T00:00:00Z\",\n    \"lecture_quantity\": 24\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/course/?pk=1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"course",
+						""
+					],
+					"query": [
+						{
+							"key": "pk",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Request to delete objects by id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/course/?pk=2",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"course",
+						""
+					],
+					"query": [
+						{
+							"key": "pk",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
