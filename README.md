@@ -40,4 +40,4 @@ And after that
 $./manage.py test
 
 
-P.S.This is my first tests, so sory about this strange things))
+P.S.This is my first test, so sory about this strange things))
